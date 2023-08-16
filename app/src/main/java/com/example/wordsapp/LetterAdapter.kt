@@ -66,7 +66,7 @@ class LetterAdapter :
         holder.button.setOnClickListener {// set the onclicListener for holder.button
             val context = holder.itemView.context // get a reference to the context
             val intent = Intent(context, DetailActivity::class.java) // create intent passing context and class
-            intent.putExtra("letter", holder.button.text.toString()) // call putExtra() method
+            intent.putExtra(DetailActivity.LETTER, holder.button.text.toString()) // call putExtra() method
             context.startActivity(intent)
         }
     }
