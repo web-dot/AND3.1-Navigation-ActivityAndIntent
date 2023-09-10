@@ -79,6 +79,12 @@ class MainActivity : AppCompatActivity() {
         return true;
     }
 
+    /**
+     * this is called any time a menu item is tapped so you need to be sure to check which menu
+     * item is tapped. You use a when statement, above. If the id matches the action the
+     * action_switch_layout menu item, you negate the value of the isLinearLayoutManager. Then
+     * call chooseLayout() and setIcon() to update the UI accordingly.
+     * */
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId){
             R.id.action_switch_layout -> {
@@ -98,7 +104,8 @@ class MainActivity : AppCompatActivity() {
              * */
             else -> super.onOptionsItemSelected(item)
         }
-//        return super.onOptionsItemSelected(item)
     }
+
+
 
 }
